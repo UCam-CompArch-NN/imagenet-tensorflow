@@ -61,7 +61,9 @@ bazel-bin/inception/download_and_preprocess_imagenet.runfiles/inception/inceptio
 Following [this discussion](https://github.com/tensorflow/models/issues/682), we run the download script separately:
 
 ```shell
-bazel-bin/inception/download_and_preprocess_imagenet.runfiles/inception/inception/data/download_imagenet.sh "${DATA_DIR}/raw-data/ /full/path/to/tensorflow/models/inception/inception/data/imagenet_lsvrc_2015_synsets.txt
+bazel-bin/inception/download_and_preprocess_imagenet.runfiles/inception/inception/data/download_imagenet.sh \
+  "${DATA_DIR}/raw-data/" \
+  /full/path/to/tensorflow/models/inception/inception/data/imagenet_lsvrc_2015_synsets.txt
 ```
 
 In `download_and_preprocess_imagenet` we then comment out all long-running tasks up to and including the call to `download_imagenet.sh`, and re-run as originally suggested:
