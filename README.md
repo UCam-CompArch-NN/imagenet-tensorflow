@@ -1,2 +1,4 @@
 # imagenet-tensorflow
 Exploring different ways of formatting the ImageNet dataset for use in TensorFlow.
+
+* [TFRecord](TFRecord)
