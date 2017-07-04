@@ -1,6 +1,6 @@
 # TFRecord Checking
 
-TFRecord checking script performs a simple traverse to all the data downloaded.
+TFRecord checking script performs a simple traverse of all the data downloaded.
 
 ## Getting started
 
@@ -8,8 +8,9 @@ TFRecord checking script performs a simple traverse to all the data downloaded.
 # location of ImageNet data in TFRecord format
 DATA_DIR=$HOME/where-the-tfrecord-data-is
 
-# run it
-python --train_dir=$(DATA_DIR)
+# run it with your tensorflow activated/stored
+# by default, I assumed you have gpu support
+python test_dataset.py --train_dir=$(DATA_DIR)
 ```
 ## Results
 
